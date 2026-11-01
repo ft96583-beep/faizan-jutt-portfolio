@@ -26,3 +26,8 @@ Vercel par naya project bana kar is folder ko deploy karein. Saqib ke repo par p
 - Instagram / TikTok / Facebook / Snapchat ke asli handles record me nahi mile, is liye unke buttons abhi faizanjutt272.pages.dev par khulte hain (pichli mrsaqib3 edit ki tarah). Asli handles milte hi src/data.ts me SOCIAL_LINKS update kar dein.
 - Testimonials aur case-study page ke andar ka kuch demo text template ka hai — apne real clients/numbers se check karke update kar lein.
 - Age claim hataya gaya hai; hero/about me "2+ Years Experience" dikhta hai.
+
+## Vercel fix (2026-11-01)
+- Vercel par `npm install` ERESOLVE de raha tha: vite 8.3.5 ko esbuild ^0.27 || ^0.28 chahiye tha, jabke package.json me esbuild ^0.25.0 tha.
+- Fix: package.json me esbuild ^0.28.0 kar diya, package-lock.json strict `npm install` se dobara banaya — ab Vercel ka default `npm install` bhi pass hota hai, `--legacy-peer-deps` ki zaroorat nahi.
+- Fix ke baad Vercel par failed deployment ko Redeploy karein.
